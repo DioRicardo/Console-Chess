@@ -1,19 +1,21 @@
-﻿namespace Board
+﻿using Console_Chess.Chessboard.Enums;
+
+namespace Console_Chess.Chessboard
 {
     class Position
     {
-        public int Line { get; set; }
+        public int Row { get; set; }
         public int Column { get; set; }
 
         public Position(int line, int column)
         {
-            Line = line;
+            Row = line;
             Column = column;
         }
 
         public override string ToString()
         {
-            return Line + ", " + Column;
+            return Row + ", " + Column;
         }
     }
 }

@@ -1,17 +1,16 @@
-﻿using Board;
-using System;
+﻿using System;
+using Console_Chess.Chessboard;
+using Console_Chess.Chessboard.Enums;
 
-namespace ConsoleChess
+namespace Console_Chess
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Position P;
+            Board board = new Board(8, 8);
 
-            P = new Position(3, 4);
 
-            Console.WriteLine("Posição: " + P);
                        
 
         }
