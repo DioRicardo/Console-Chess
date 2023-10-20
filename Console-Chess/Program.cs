@@ -10,21 +10,11 @@ namespace Console_Chess
     {
         static void Main(string[] args)
         {
-            try
-            {
-                Board board = new Board(8, 8);
+            PositionChess pos = new PositionChess('a', 8);
+            
+            Console.WriteLine(pos);
 
-                board.SetPiece(new Rook(board, Color.Black), new Position(0, 0));
-                board.SetPiece(new Rook(board, Color.Black), new Position(1, 3));
-                board.SetPiece(new King(board, Color.Black), new Position(0, 2));
-
-                Screen.PrintBoardOnScreen(board);
-            }
-            catch (BoardException e)
-            {
-                Console.WriteLine(e.Message);
-            }           
-
+            Console.WriteLine(pos.ToPosition());
 
         }
     }
