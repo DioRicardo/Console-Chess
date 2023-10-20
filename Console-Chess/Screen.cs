@@ -1,6 +1,7 @@
 ﻿using System;
 using Console_Chess.Chessboard;
 using Console_Chess.Chessboard.Enums;
+using Console_Chess.Chessboard.Exceptions;
 
 namespace Console_Chess
 {
@@ -10,7 +11,7 @@ namespace Console_Chess
         {
             for (int i = 0; i < board.Rows;  i++)
             {
-                for (int j = 0; j < board.Column; j++)
+                for (int j = 0; j < board.Columns; j++)
                 {
                     if (board.Piece(i, j) == null)
                     {
