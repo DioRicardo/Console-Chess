@@ -6,16 +6,21 @@ namespace Console_Chess.Chessboard
     class Piece
     {
         public Position Position { get; set; }
-        public Color Color { get; protected set; }
-        public int NumOfMovement { get; protected set; }
+        public ChessColors ChessColors { get; protected set; }
+        public int QntMovement { get; protected set; }
         public Board Board { get; protected set; }
 
-        public Piece(Board board, Color color)
+        public Piece(Board board, ChessColors color)
         {
             Position = null;
-            Color = color;
+            ChessColors = color;
             Board = board;
-            NumOfMovement = 0;
+            QntMovement = 0;
+        }
+
+        public void IncrementQntMovement()
+        {
+            QntMovement++;
         }
     }
 }

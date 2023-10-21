@@ -6,7 +6,7 @@ namespace Console_Chess.Chess
 {
     class King : Piece
     {
-        public King(Board Board, Color Color) : base(Board, Color)
+        public King(Board Board, ChessColors Color) : base(Board, Color)
         {
 
         }

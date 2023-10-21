@@ -1,4 +1,5 @@
 ﻿using System;
+using Console_Chess.Chess;
 using Console_Chess.Chessboard;
 using Console_Chess.Chessboard.Enums;
 using Console_Chess.Chessboard.Exceptions;
@@ -31,9 +32,18 @@ namespace Console_Chess
             Console.WriteLine("  a b c d e f g h");
         }
 
+        public static PositionChess ReadChessPosition()
+        {
+            string s = Console.ReadLine();
+            char Column = s[0];
+            int Row = int.Parse(s[1] + "");
+            return new PositionChess(Column, Row);
+        }
+        
+
         public static void PrintPiece(Piece piece)
         {
-            if(piece.Color == Color.White)
+            if(piece.ChessColors == ChessColors.White)
             {
                 Console.Write(piece);
             }

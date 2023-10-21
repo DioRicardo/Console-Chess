@@ -1,6 +1,6 @@
 ﻿namespace Console_Chess.Chessboard.Enums
 {
-    enum Color
+    enum ChessColors
     {
         White,
         Black,
